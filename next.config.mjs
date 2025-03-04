@@ -1,4 +1,21 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        pathname: "/**",
+      },
+    ],
+    dangerouslyAllowSVG: true, // ✅ Enables SVG images
+    contentSecurityPolicy: "default-src 'self'; img-src * data: blob:;",
+  },
+};
 
 export default nextConfig;

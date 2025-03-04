@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Getting Started with Next.js",
+    "content": "Next.js is a powerful React framework that enables features like server-side rendering and static site generation. In this post, we'll explore how to set up a basic Next.js project.",
+    "author": "John Doe",
+    "timestamp": "2023-10-01T12:00:00Z",
+    "tags": ["Next.js", "React", "Web Development"]
+  },
+  {
+    "id": "2",
+    "title": "Introduction to Firebase",
+    "content": "Firebase is a Backend-as-a-Service (BaaS) platform that provides tools for authentication, database, hosting, and more. Learn how to integrate Firebase with your Next.js app.",
+    "author": "Jane Smith",
+    "timestamp": "2023-10-02T14:30:00Z",
+    "tags": ["Firebase", "Next.js", "Backend"]
+  },
+  {
+    "id": "3",
+    "title": "Tailwind CSS for Rapid UI Development",
+    "content": "Tailwind CSS is a utility-first CSS framework that allows you to build custom designs quickly. Discover how to use Tailwind in your Next.js projects.",
+    "author": "Alice Johnson",
+    "timestamp": "2023-10-03T09:15:00Z",
+    "tags": ["Tailwind CSS", "CSS", "UI/UX"]
+  }
+]
