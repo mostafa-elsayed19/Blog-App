@@ -7,7 +7,7 @@ import User from "./User";
 function Header() {
   const { user } = useAuth();
   return (
-    <header className="overflow-hidden bg-headerBg">
+    <header className="bg-headerBg">
       <Wrapper className="my-0 flex items-center justify-between gap-4 overflow-hidden py-4 text-lightText">
         <ul className="flex items-center gap-4">
           <Link href={"/"}>

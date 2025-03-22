@@ -23,7 +23,7 @@ export async function uploadData() {
 export async function getBlogs() {
   try {
     const response = await fetch("http://localhost:3000/api/blogs", {
-      next: { revalidate: 300 }, // Cache for 5 mins
+      next: { revalidate: 0 }, // Cache for 5 mins
     });
     return response.json();
 
@@ -36,7 +36,7 @@ export async function getBlogs() {
 export async function getBlog(blogId) {
   try {
     const response = await fetch(`http://localhost:3000/api/blogs/${blogId}`, {
-      next: { revalidate: 300 }, // Cache for 5 mins
+      next: { revalidate: 0 }, // Cache for 5 mins
     });
 
     return response.json();

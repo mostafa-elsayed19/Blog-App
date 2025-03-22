@@ -27,7 +27,7 @@ function Login() {
         </button>
       </Form>
       <button
-        className="mt-8 w-full rounded-md bg-buttonBg p-2 text-white"
+        className="mt-4 w-full rounded-md bg-buttonBg p-2 text-white"
         onClick={signInWithGoogle}
       >
         Sign in with google

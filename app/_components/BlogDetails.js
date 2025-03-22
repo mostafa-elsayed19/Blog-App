@@ -8,14 +8,13 @@ import Comments from "./Comments";
 // ];
 
 function BlogDetails({ blog }) {
-  console.log(blog);
   return (
     <div className="flex flex-col gap-4">
       {/* Blog title and tags */}
       <div className="flex items-center justify-between">
         <h1 className="text-center text-3xl font-bold">{blog.title}</h1>
         <ul className="flex gap-2">
-          {blog.tags.map((tag) => (
+          {blog.tags?.map((tag) => (
             <li
               key={tag}
               className="rounded-md bg-foreground px-2 py-1 text-sm text-background"
@@ -29,10 +28,10 @@ function BlogDetails({ blog }) {
       {/* Blog Image */}
       <div className="relative min-h-[300px]">
         <Image
-          src="https:/placehold.co/400"
+          src={blog.imageUrl || "https:/placehold.co/400"}
           fill
-          alt=""
-          className="w-full object-cover"
+          alt={"Cover image for " + blog.title}
+          className="w-full rounded-lg object-cover"
           priority
         />
       </div>
