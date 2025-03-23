@@ -3,7 +3,7 @@ import Wrapper from "./_components/Wrapper";
 
 function loading() {
   return (
-    <Wrapper className="flex h-dvh items-center justify-center">
+    <Wrapper className="flex min-h-full items-center justify-center">
       <Spinner />
     </Wrapper>
   );

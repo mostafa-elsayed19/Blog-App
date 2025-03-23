@@ -4,11 +4,7 @@ import { getBlogs } from "./_lib/actions";
 async function Home() {
   const blogs = await getBlogs();
 
-  return (
-    <main className="h-full w-full">
-      <BlogList blogs={blogs} />
-    </main>
-  );
+  return <BlogList blogs={blogs} />;
 }
 
 export default Home;
