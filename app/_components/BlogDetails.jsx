@@ -46,7 +46,7 @@ function BlogDetails({ blog }) {
       <div className="mt-12 space-y-4">
         <h2 className="text-2xl font-bold">Comments</h2>
       </div>
-      <Comments comments={blog?.comments} />
+      <Comments comments={blog?.comments} blogId={blog?.id} />
     </div>
   );
 }
