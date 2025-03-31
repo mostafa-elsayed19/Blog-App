@@ -30,9 +30,9 @@ function Comments({ comments, blogId }) {
             <p>{comment.content}</p>
             {userId === comment.user && (
               <Button
+                className="ml-auto"
                 type="button"
                 onClick={() => console.log("Delete comment")}
-                // className="text-red-500"
               >
                 Delete
               </Button>

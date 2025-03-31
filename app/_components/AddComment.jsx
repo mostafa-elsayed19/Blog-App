@@ -12,6 +12,7 @@ import {
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore";
+import Spinner from "./Spinner";
 
 function AddComment({ blogId }) {
   const { user } = useAuth();
@@ -20,6 +21,7 @@ function AddComment({ blogId }) {
     name: "",
     content: "",
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -48,6 +50,7 @@ function AddComment({ blogId }) {
     }
 
     try {
+      setLoading(true);
       const blogRef = doc(db, "blogs", blogId);
 
       await updateDoc(blogRef, {
@@ -60,10 +63,13 @@ function AddComment({ blogId }) {
         name: user?.displayName || "",
         comment: "",
       });
+      setLoading(false);
     } catch (error) {
       console.error("Error adding document: ", error);
     }
   }
+
+  if (loading) return <Spinner />;
 
   return (
     <Form onSubmit={handleSubmitForm}>
